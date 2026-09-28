@@ -1,0 +1,18 @@
+Nombre: Aarón Andrés Martínez Novelo
+Fecha: 21/09/2026
+
+1. ¿Qué diferencia existe entre una excepción técnica y una excepción de negocio?
+
+Una excepción técnica ocurre cuando algo falla en el funcionamiento del programa, por ejemplo, si el servidor está apagado o no se puede acceder a la página. Una excepción de negocio ocurre cuando el programa funciona correctamente, pero el resultado no cumple con una regla del proceso, como cuando se busca una matrícula que no existe.
+
+2. ¿Por qué son preferibles los localizadores semánticos frente a coordenadas de pantalla?
+
+Porque los localizadores semánticos buscan los elementos por lo que representan, como su nombre, etiqueta o rol. Esto hace que el programa sea más fácil de entender y también más resistente a cambios en el diseño de la página. Las coordenadas pueden dejar de funcionar si cambia la posición de un elemento.
+
+3. ¿Por qué expect_download() se prepara antes de hacer clic en el enlace de descarga?
+
+Porque la descarga puede comenzar inmediatamente después de hacer clic. Al preparar expect_download() antes, Playwright puede detectar y capturar correctamente el evento de descarga.
+
+4. ¿Qué tendría que cambiar el bot para procesar una lista de matrículas?
+
+Se tendría que guardar las matrículas en una lista y utilizar un ciclo para procesarlas una por una. Para cada matrícula, el bot tendría que llenar el formulario, buscarla, revisar el resultado y, si existe, descargar su kárdex y guardar la evidencia correspondiente.
