@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "RPA: iniciar portal local",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": ["server.py"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "RPA: ejecutar archivo abierto",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": ["${file}"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      }
+    }
+  ]
+}
+

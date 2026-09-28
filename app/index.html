@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal escolar de práctica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <span class="eyebrow">LABORATORIO RPA</span>
+    <h1>Consulta de kárdex</h1>
+    <p>Portal local con información sintética para practicar automatización web.</p>
+  </header>
+
+  <main>
+    <section class="search-panel" aria-labelledby="search-title">
+      <h2 id="search-title">Buscar estudiante</h2>
+      <form id="student-form">
+        <label for="enrollment">Matrícula</label>
+        <div class="input-row">
+          <input id="enrollment" name="enrollment" placeholder="IAI0001" autocomplete="off" required>
+          <button type="submit">Buscar</button>
+        </div>
+        <p class="hint">Pruebe IAI0001, IAI0002, IAI0003 o una matrícula inexistente.</p>
+      </form>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite" data-testid="result-panel">
+      <div>
+        <span id="result-type" class="status-label"></span>
+        <h2 id="student-name"></h2>
+        <p id="student-enrollment"></p>
+      </div>
+      <a id="download-link" class="download hidden" role="button">Descargar kárdex</a>
+    </section>
+  </main>
+
+  <footer>Datos sintéticos · No utilizar información estudiantil real</footer>
+  <script src="app.js"></script>
+</body>
+</html>
+
